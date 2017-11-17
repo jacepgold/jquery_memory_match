@@ -16,8 +16,6 @@ for (count = 0, count < cards.length, count++) {
 }
 
 
-
-
 /*******************
     FUNCTIONS
 *******************/
