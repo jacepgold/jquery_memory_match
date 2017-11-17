@@ -1,35 +1,29 @@
-@import 'reset.css';
-
 body {
   background-image: url('../images/background.jpg');
   background-repeat: repeat;
 }
-header {
-  display: none;
-  background-color: silver;
-  text-align: center;
-  padding: 2em;
+
+#header {
+  display: flex;
+  align-content: space-around;
+  flex-direction: row (default);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  background-color: rgb(139, 72, 72);
+  padding: 1em;
   h1 {
-    font-size: 3em;
+    color: white;
+    text-align: center;
   }
 }
 
-#game_space {
-  .row_container {
-    align-items: center;
-    color: white;
-    display: flex;
-    flex-direction: row (default);
-    justify-content: space-around;
-    margin-top: 2em;
-    .card {
-      width: 10%;
-      .card-reveal {
-        background-color: blue;
-        i {
-          color: white;
-        }
-      }
-    }
+.card {
+  background-color: transparent;
+  img {
+    width: 80%;
+    margin: 2em;
+    border-radius: 25px;
+    box-shadow: 23px 21px 3px 3px rgba(0, 0, 0, 0.35)
   }
 }

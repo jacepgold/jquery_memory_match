@@ -1,262 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta name="port" content="width=device-width, initial-scale=1.0"/>
-    <title>JG | jQuery Memory Match</title>
-     <!--Import Google Icon Font-->
-     <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+    <title>jQuery Memory Match</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
-    <header id="site_header">
-      <h1 id="title">jQuery Memory Match</h1>
+    <header id="header">
+      <h2 id="match">Match</h2>
+      <h1>Memory Card Matching Game</h1>
+      <h2 id="win">Win</h2>
     </header>
-      <section id="game_space">
-      <!--
-      Create a card
-
-
-      -->
-      <!-- Row One -->
-      <div class="row_container">
-        <!-- Start a card -->
-        <div class="card" id="row1card1">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="images/sample-1.jpg">
+    <button id="new-game">New Game</button>
+    <div class="game-grid">
+      <div class="custom-row">
+        <div class="row">
+          <div class="col-sm-3 card" id"'0" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
           </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">View</i></span>
-
+          <div class="col-sm-3 card" id"'1" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
           </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          <div class="col-sm-3 card" id"'2" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
           </div>
-        </div>
-        <div class="card" id="row1card2">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="images/sample-1.jpg">
+          <div class="col-sm-3 card" id"'3" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
           </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-          </div>
-        </div>
-        <div class="card"id="row1card3">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="images/sample-1.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-          </div>
-        </div>
-        <div class="card" id="row1card4">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="images/sample-1.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-          </div>
-        </div>
-        <!-- end a card -->
-      </div>
-      <!-- End row one -->
-      <!-- Row two -->
-      <div class="row_container">
-        <!-- Start a card -->
-        <div class="card"id="row2card1">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="images/sample-1.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-          </div>
-          <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
-          </div>
-        </div>
-        <div class="card" id="row2card2">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="images/sample-1.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-          </div>
-        </div>
-        <div class="card" id="row2card3">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="images/sample-1.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-          </div>
-        </div>
-        <div class="card" id="row2card4">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="images/sample-1.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-          </div>
-        </div>
-        <!-- end a card -->
-      </div>
-      <!-- End row two -->
-      <!-- Row three -->
-      <div class="row_container">
-      <!-- Start a card -->
-      <div class="card" id="row3card1">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="images/sample-1.jpg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
         </div>
       </div>
-      <div class="card" id="row3card2">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="images/sample-1.jpg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
-        </div>
-      </div>
-      <div class="card" id="row3card3">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="images/sample-1.jpg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      <div class="custom-row">
+        <div class="row">
+          <div class="col-sm-3 card" id"'4" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
+          </div>
+          <div class="col-sm-3 card" id"'5" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
+          </div>
+          <div class="col-sm-3 card" id"'6" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
+          </div>
+          <div class="col-sm-3 card" id"'7" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
+          </div>
         </div>
       </div>
-      <div class="card" id="row3card4">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="images/sample-1.jpg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
-        </div>
-      </div>
-      <!-- end a card -->
-      </div>
-      <!-- End row three -->
-      <!-- Row four -->
-      <div class="row_container">
-      <!-- Start a card -->
-      <div class="card" id="row4card1">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="images/sample-1.jpg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      <div class="custom-row">
+        <div class="row">
+          <div class="col-sm-3 card" id"'8" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
+          </div>
+          <div class="col-sm-3 card" id"'9" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
+          </div>
+          <div class="col-sm-3 card" id="10" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
+          </div>
+          <div class="col-sm-3 card" id="11" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
+          </div>
         </div>
       </div>
-      <div class="card" id="row4card2">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="images/sample-1.jpg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
-        </div>
-      </div>
-      <div class="card" id="row4card3">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="images/sample-1.jpg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      <div class="custom-row">
+        <div class="row">
+          <div class="col-sm-3 card" id="12" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
+          </div>
+          <div class="col-sm-3 card" id="13" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
+          </div>
+          <div class="col-sm-3 card" id="14" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
+          </div>
+          <div class="col-sm-3 card" id="15" data-count="0">
+            <img src="images/sample-1.jpg" alt="Card" class="img-rounded">
+          </div>
         </div>
       </div>
-      <div class="card" id="row4card4">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="images/sample-1.jpg">
-        </div>
-        <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4"><i class="material-icons right"></i></span>
-
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
-        </div>
-      </div>
-    <!-- end a card -->
     </div>
-    <!-- End row four -->
-    </section>
-
-    <!-- Row two -->
-
-    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="css/main.css" media="screen,projection" />
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="main.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,26 +1,24 @@
-@import url(reset.css);
 body {
   background-image: url("../images/background.jpg");
   background-repeat: repeat; }
 
-header {
-  display: none;
-  background-color: silver;
-  text-align: center;
-  padding: 2em; }
-  header h1 {
-    font-size: 3em; }
-
-#game_space .row_container {
-  align-items: center;
-  color: white;
+#header {
   display: flex;
+  align-content: space-around;
   flex-direction: row default;
+  flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 2em; }
-  #game_space .row_container .card {
-    width: 10%; }
-    #game_space .row_container .card .card-reveal {
-      background-color: blue; }
-      #game_space .row_container .card .card-reveal i {
-        color: white; }
+  width: 100%;
+  background-color: #8b4848;
+  padding: 1em; }
+  #header h1 {
+    color: white;
+    text-align: center; }
+
+.card {
+  background-color: transparent; }
+  .card img {
+    width: 80%;
+    margin: 2em;
+    border-radius: 25px;
+    box-shadow: 23px 21px 3px 3px rgba(0, 0, 0, 0.35); }

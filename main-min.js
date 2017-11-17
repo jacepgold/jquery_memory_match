@@ -1,1 +1,0 @@
-$(document).ready(function(){var n=[];$(".cards").each(function(){n.append(this.id),console.log(n)})});
