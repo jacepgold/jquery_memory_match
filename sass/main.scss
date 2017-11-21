@@ -3,6 +3,10 @@ body {
   background-repeat: repeat;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 #header {
   display: flex;
   align-content: space-around;

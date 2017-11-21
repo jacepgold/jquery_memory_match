@@ -7,13 +7,20 @@
 		"uuidString": "98FCC2E0-98D6-46BA-B188-0AFD4BC6F8B6"
 		}
 	],
-"creatorBuild": "26097",
+"creatorBuild": "26148",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/.gitignore",
+		"oF": 0
+		},
+	"\/build\/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/.gitignore",
 		"oF": 0
 		},
 	"\/css\/main.css": {
@@ -26,36 +33,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"\/css\/materialize.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/materialize-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/css\/reset-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/reset-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/css\/reset.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/reset-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"\/images\/background.jpg": {
 		"ft": 16384,
 		"iS": 59887,
@@ -63,7 +40,7 @@
 		"oAP": "\/images\/background.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/sample-1.jpg": {
@@ -73,7 +50,7 @@
 		"oAP": "\/images\/sample-1.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/index.html": {
@@ -112,7 +89,7 @@
 	"displayValue": "jquery_memory_match",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_magenta",
-	"lastBuiltDate": 532474285
+	"lastBuiltDate": 532622640
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

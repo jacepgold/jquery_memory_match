@@ -8,13 +8,13 @@ var randomNumberArray = []
 var guess1 = 0
 var guess2 = 0
 var clicks = 0
-var cards = $('.card')
+var cards = $('.card') // THIS IS A JQUERY OBJECT
 var card = document.createElement('div')
 var count = 0
-for (count = 0, count < cards.length, count++) {
-  cards[count].addEventListener()
-}
 
+$.each(cards, function (i) {
+  console.log('i ' + cards[i])
+});
 
 /*******************
     FUNCTIONS
@@ -48,43 +48,41 @@ function setDataAttributes() {
     
     // Get a random number by valling the genRandomNumber function
     var randomNumber = genRandomNumber()
-    randomNumberArray[count] =  randomNumber 
-    console.log("Random number at " + count + " is " + randomNumberArray[count])
+    randomNumberArray[count] =  randomNumber
+  
+    var card1 = $(cards[count])
+    var card2 = $(cards[randomNumber])
     
-    //
-    var card1 = cards[count]
-    var card2 = cards[randomNumber]
-    console.log("Card 1 is " + card1.id)
-    console.log("Card 2 is " + card.id)
-    
-    // Check for is randomNumber is already on a card. If it is, get another ranodm number
+    // Check for is randomNumber is already on a card. If it is, get another random number
     // If it's not, set a data-attribute to two HTML elements with the 'cards' class
     if(jQuery.inArray(randomNumber, randomNumberArray)==0) {
       console.log("Number " + randomNumber + " is already used. Trying again.")
-      randomNumber[count] = genRandomNumber()
+      // randomNumber[count] = genRandomNumber()
     } else {
-      // Apply randomNumber to the a dataset on card1 and card2
+      card1.data('count', randomNumber)
+      card2.data('count', randomNumber)
+      console.log('Card ' + card1.attr('id') + ' & ' + card2.attr('id') + ' data-count: ' + card1.data('count'))
     }
     count++
-  }
+  } // End while loop
+  
 }
 
-function checkForMatch() {
-  if (guess1 === guess2) {
-    console.log('Match has been made!')
-    console.log('Found ' + guess1)
-  } else {
-    console.log('No match')
-    console.log('Guess 1 - ' + guess1)
-    console.log('Guess 2 - ' + guess2)
-  }
-}
+// function checkForMatch() {
+//   if (guess1 === guess2) {
+//     console.log('Match has been made!')
+//     console.log('Found ' + guess1)
+//   } else {
+//     console.log('No match')
+//     console.log('Guess 1 - ' + guess1)
+//     console.log('Guess 2 - ' + guess2)
+//   }
+// }
 
 
 function theGame() {
   $(cards).on('click', '.card', function() {
     var card = $(this)
-    console.log('Card has been clicked!')
     clicks++
   })
 }
@@ -96,9 +94,6 @@ function newGame() {
   createGameGrid()
   setDataAttributes();
 }
-
-
-
 
 /*****************************
  WHEN DOCUMENT IS READY
